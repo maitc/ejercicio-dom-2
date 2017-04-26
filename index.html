@@ -15,10 +15,19 @@
 	<p id="resultado"></p>
 
 	<script>
-		
+		var mostrarClass1 = document.getElementsByClassName("titulo").length;
+		var mostrarClass2 = document.getElementsByClassName("mensaje").length;
 		var mostrarRes = document.getElementById("resultado");//se llama elemento a cambiar coninnerenla linea deabajo.
-		mostrarRes.innerHTML = "Son muchos!";
-		console.log(document.getElementsByClassName("mensaje"));//compruebo con console.log
+		
+		if(mostrarClass2 == 1){//me indicara en que if está mi clase de 'mensaje.'
+			mostrarRes.innerHTML = "Es muy poco";
+		}else if(mostrarClass2 <= 3){
+			mostrarRes.innerHTML = "No está mal";
+		}else if(mostrarClass2 >= 4){
+			mostrarRes.innerHTML = "Son muchos!";
+		}
+		
+		
 	</script>
 
 </body>
